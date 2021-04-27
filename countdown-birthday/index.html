@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Your Birthday</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+
+
+    <div class="c-card">
+        <h1 class="c-card__title">
+            Your Birthday Countdown !
+        </h1>
+
+        <div class="c-card__content">
+            <ul class="c-card__list">
+                <li class="c-card__item">
+                    <span class="c-card__number" id="month">56</span>
+                    <span class="c-card__label">month</span>
+                </li>
+                <li class="c-card__item">
+                    <span class="c-card__number" id="day">5</span>
+                    <span class="c-card__label">day</span>
+                </li>
+                <li class="c-card__item">
+                    <span class="c-card__number" id="hour">5</span>
+                    <span class="c-card__label">Hour</span>
+                </li>
+                <li class="c-card__item">
+                    <span class="c-card__number" id="min">5</span>
+                    <span class="c-card__label">Minutes</span>
+                </li>
+                <li class="c-card__item">
+                    <span class="c-card__number" id="sec">5</span>
+                    <span class="c-card__label">Second</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <style>
+        .title-birth {
+            position: absolute;
+            margin-top: 30vh;
+            width: 100%;
+            text-align: center;
+            font-size: 333%;
+            font-family: sans-serif;
+            color: grey;
+            opacity: 0.5;
+        }
+
+        canvas {
+            overflow-y: hidden;
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            position: absolute;
+        }
+
+        .container-canvas{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% ;
+            height: 100% ;
+            z-index: 1;
+        }
+
+    </style>
+
+    <div class="container-canvas">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <div class="content-blur"></div>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
