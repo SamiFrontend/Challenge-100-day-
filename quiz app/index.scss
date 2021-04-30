@@ -1,0 +1,147 @@
+* {
+     margin: 0 ;
+     padding: 0 ;
+     font-family: 'Montserrat', sans-serif;
+     list-style: none ;
+}
+
+$primaryColor : #E9D529 ; 
+
+html , body{
+    height: 100% ;
+    width: 100% ;
+
+}
+
+
+body{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.c-quiz{
+    max-width: 600px ;
+    width: 100% ;
+    border: 1px solid rgb(223, 223, 223) ;
+    border-radius: 20px ;
+    &__head{
+        &-overley{
+            background:  linear-gradient(to right , #e9d629d2 , #e9d629b4 )  , url(./green-chameleon-s9CC2SKySJM-unsplash.jpg) no-repeat center ;
+            height: 250px ;
+            background-size: cover;
+            display: flex;
+            align-items: flex-end;
+            border-radius: 20px 20px 0 0;
+        }
+
+        &__title{
+            margin: 2rem 3rem ;
+        }
+    }
+
+
+    &__body{
+        margin: 2rem 3rem ;
+        transition: opacity .5s ease ;
+        &--opacity {
+            opacity: 0 ;
+        }
+    }
+
+    &__quistion{
+        margin-bottom: 1rem;
+        line-height: 1.7 ;
+        font-weight: 600 ;
+        font-size: 15px ;
+    }
+
+    &__answer{
+        margin-bottom: 12px ;
+        font-size: 15px ;
+        color: grey ;
+        input:checked + .c-quiz__label{
+            color: black ;
+            font-weight: 600 ;
+        }
+
+        .c-quiz__label{
+            margin-left: 5px ;
+        }
+
+
+        input{
+            width: 15px ;
+            height: 15px ;
+            transform: translateY(2px);
+        }
+    }
+
+
+    &__footer{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 3rem 2rem ;
+        align-items: center;
+    }
+
+    &__button{
+        padding: 10px 0 ;
+        min-width: 150px ;
+        font-size: 15px ;
+        cursor: pointer;
+        border: none ;
+        background: $primaryColor ;
+        color: black ;
+        font-weight: 600 ;
+        transition: transform .2s ease ;
+        &:active{
+            transform: scale(.98);
+        }
+
+        &:disabled{
+            background: #bfbfbf ;
+            color: #848484 ;
+            cursor: no-drop ;
+        }
+    }
+
+    &__length{
+        font-size: 15px ;
+        color: grey ;
+        span{
+            color: black ;
+            font-weight: 600 ;
+            font-size: 17px ;
+        }
+    }
+}
+
+
+.title-mark{
+    text-align: center ;
+    font-size: 18px ;
+    font-weight: 400 ;
+    color: grey ;
+}
+
+.mark{
+    text-align: center ;
+    margin: 1rem 0 ;
+    font-size: 14px ;
+    .mark_ , .quistion{
+        font-weight: 600 ;
+        font-size: 25px ;
+        color: grey ;
+        margin: 0 10px ;
+    }
+
+    .mark_{
+        color: black ;
+        text-decoration: underline ;
+        text-decoration-color: $primaryColor;
+    }
+}

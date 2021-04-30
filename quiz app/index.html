@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+
+    <div class="c-quiz " >
+          <div class="c-quiz__head">
+             <div class="c-quiz__head-overley">
+                  <h1 class="c-quiz__head__title">
+                      Quiz App
+                  </h1>
+             </div>
+          </div>  
+          <div class="c-quiz__body" id="quistion-content">
+            <p class="c-quiz__quistion" id="quistion">
+                1.Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, error.
+            </p>
+            <ul class="c-quiz__list">
+                <li class="c-quiz__answer">
+                    <input type="radio" name="answer" value="a" id="a">
+                    <label class="c-quiz__label" for="a">Lorem, ipsum.</label>
+                </li>
+                <li class="c-quiz__answer">
+                    <input type="radio" name="answer" value="b" id="b">
+                    <label class="c-quiz__label" for="b">Lorem, ipsum.</label>
+                </li>
+                <li class="c-quiz__answer">
+                    <input type="radio" name="answer" value="c" id="c">
+                    <label class="c-quiz__label" for="c">Lorem, ipsum.</label>
+                </li>
+                <li class="c-quiz__answer">
+                    <input type="radio" name="answer" value="d" id="d">
+                    <label class="c-quiz__label" for="d">Lorem, ipsum.</label>
+                </li>
+            </ul>
+           
+          </div>
+          <div class="c-quiz__footer">
+              <p class="c-quiz__length">
+                  current quistion is <span id="current">0</span>
+                  of <span id="length">20</span>
+              </p>
+             <button id="next" class="c-quiz__button" onclick="nextQuistion()" disabled>
+                 Next
+             </button>
+          </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

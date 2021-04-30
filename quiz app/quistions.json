@@ -1,0 +1,48 @@
+{
+    "quistions" : [
+        {
+            "quistion": "what is the best language in web ?" ,
+             "answers" : [
+                 "Javascript" , 
+                 "Ruby" , 
+                 "C#" , 
+                 "Java"
+             ] ,
+             "solution" : "a"
+        } ,
+        {
+            "quistion": "we are have array : [1,2,3,4] in Javascript if use array.pop() what is result ?" ,
+             "answers" : [
+                 "[1,2,3]" , 
+                 "[2,3,4]" , 
+                 "[]" , 
+                 "All answers is not correct"
+             ] ,
+             "solution" : "a"
+
+        } ,
+        {
+            "quistion": "How is declare Variable in Javascript ?" ,
+             "answers" : [
+                 "let only" , 
+                 "let , var , const " , 
+                 "string Ahmed " , 
+                 "All of above "
+             ] ,
+             "solution" : "b"
+
+        } ,
+        {
+            "quistion": "who are develop this page ?" ,
+             "answers" : [
+                 "Sami" , 
+                 "Ahmed" , 
+                 "Saeed" , 
+                 "Khalid"
+             ] , 
+             "solution" : "a"
+        } 
+    ] 
+
+    
+}
