@@ -1,0 +1,236 @@
+$bgColor : #262626  ;
+$priamryColor : #7773CF ; 
+$secondryColor : #2A2A2A ; 
+$thirdColor : #373737 ; 
+$buttonColor : $priamryColor ; 
+$txtColor : white ; 
+$radius: 12px ; 
+
+* {
+    margin: 0 ;
+    padding: 0 ;
+}
+
+
+body , html {
+    height: 100% ;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400 ;
+    width: 100% ;
+    background-color: $bgColor ;
+    color: $txtColor ;
+}
+
+
+
+
+
+.container{
+    width: 100% ;
+    max-width: 620px ;
+    margin: 0 auto ;
+}
+
+.play-music{
+    padding: 5rem 0 0 ;
+}
+
+
+.container-play{
+    position: relative;
+    z-index: 1 ;
+    &::after{
+        position: absolute;
+        content: ''; 
+        width: 100% ;
+        z-index: -1;
+        height: 75% ;
+        left: 0 ;
+        top: 3.4rem ;
+        border-radius: $radius ;
+        background-color: $secondryColor ;
+    }
+}
+
+.music-content{
+    z-index: 1000 ;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center;
+
+    & > * {
+        margin-bottom: 25px ;
+    }
+
+    .current-music{
+        width: 220px ;
+        height : 220px ;
+        border: 3px solid $priamryColor ;
+        border-radius: $radius ;
+    }
+
+
+    .title-music{
+        font-size: 21px  ;
+        font-weight: 400 ;
+        letter-spacing: .5px ;
+    }
+
+    .play-container{
+        display: flex ;
+        width: 80% ;
+        align-items: center;
+        .progress{
+            flex-grow: 1 ;
+            height: 15px ;
+            background-color: $thirdColor ;
+            margin: 0 1rem ;
+            box-sizing: border-box ;
+            border-radius: $radius;
+            position: relative;
+            cursor: pointer;
+            .progress-played{
+                position: absolute;
+                top: 0 ;
+                left: 0 ;
+                transition: width .1s ease-out ;
+                width: 0% ;
+                height: 100% ;
+                border-radius: $radius;
+                background-color: $priamryColor ;
+            }
+        }
+    }
+
+
+
+    .control-play{
+        margin-top: 15px ;
+        display: flex ;
+        align-items: center;
+        .button-control{
+            border: none ;
+            outline: none ;
+            width: 55px ;
+            height: 55px ;
+            border-radius: 50% ;
+            margin: 0 10px ;
+            cursor: pointer;
+            &:active{
+                transform: scale(.98);
+            }
+        }
+
+        .button-play{
+            width: 70px ;
+            height: 70px ;
+            background: url(../assets/icon/play-button-arrowhead.svg) no-repeat center center ;
+            background-size: 29px 29px ;
+            background-position-x: 23px ;
+            background-color: $priamryColor ;
+        }
+
+        .isPlayed{
+            background-image: url(../assets/icon/pause-button.svg) !important;
+            background-position-x: 20.3px ;
+        }
+
+        
+
+        .button-skip{
+            background: url(../assets/icon/prev.svg) no-repeat center ;
+            background-size: 20px 20px ;
+            background-color: $priamryColor ;
+        }
+
+        .skip-next{
+            background-image: url(../assets/icon/next.svg);
+        }
+    }
+}
+
+
+
+.playlist{
+    .title{
+        font-size: 20px ;
+        letter-spacing: .5px ;
+        font-weight: 400;
+    }
+
+    .music{
+
+        &.active{
+            border: 2px solid    $priamryColor ;
+        }
+
+        background-color: $secondryColor;
+        display: flex;
+        padding: 10px 1rem  ;
+        align-items: center;
+        border-radius: $radius ;
+        cursor: pointer ;
+        transition: scale .2s ease ;
+        &:active{
+            transform: scale(.99);
+        }
+        margin-top: 10px ;
+        .music-img{
+            width: 78px ;
+            object-fit: cover ;
+            border-radius: 5px ;
+            user-select: none ;
+                 -moz-user-select: none ;
+                 -webkit-user-select: none ;
+        }
+
+         .music-info{
+             flex-grow: 1 ;
+             padding:  0 2rem ;
+             .name-music{
+                 font-size: 15px ;
+                 
+                 margin: 0 0 5px ;
+             }
+
+             & > * {
+                user-select: none ;
+                -moz-user-select: none ;
+                -webkit-user-select: none ;
+             }
+
+             .desc-music{
+                 font-size: 13px ;
+                 color: gray ;
+                 margin: 0 ;
+                 letter-spacing: .5px ;
+                 line-height: 1.6 ;
+             }
+
+
+         }
+
+
+
+         .duration-music{
+             font-size: 13px ;
+             text-align: center ;
+             padding-right: 8px ;
+             letter-spacing: .8px ;
+             user-select: none ;
+                 -moz-user-select: none ;
+                 -webkit-user-select: none ;
+             position: relative;
+             &::before{
+                 position: absolute;
+                 content: ''; 
+                 left: -20px  ;
+                 height: 65px  ;
+                 width: 1px ;
+                 top: -25px  ;
+                 background-color: $thirdColor ;
+
+             }
+         }
+    }
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25">
+  <defs>
+    <clipPath id="clip-next">
+      <rect width="25" height="25"/>
+    </clipPath>
+  </defs>
+  <g id="next" clip-path="url(#clip-next)">
+    <path id="Icon_material-skip-next" data-name="Icon material-skip-next" d="M9,33,26,21,9,9ZM29,9V33h4V9Z" transform="translate(-7.55 -7.999)" fill="#fff"/>
+  </g>
+</svg>

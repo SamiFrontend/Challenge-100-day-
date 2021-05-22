@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music For The Pepole</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body >
+
+    <section class="play-music">
+        <div class="container container-play">
+            <div class="music-content">
+
+                <img src="" id="currentImage" class="current-music" alt="music Played">
+
+
+                <audio id="controlMusic" src=""  >
+                </audio>
+
+                <p class="title-music" id="currentTitle">
+                    Leave Me Lonely
+                </p>
+
+                <div class="play-container">
+                    <span class="duration" id="startTime">0:00</span>
+                    <div class="progress" id="progress">
+                        <span class="progress-played" id="durationProgress"></span>
+                    </div>
+                    <span class="duration" id="lengthMusic">2:12</span>
+                </div>
+
+                <div class="control-play">
+                    <button class="skip-prev button-skip button-control" id="prevButton">
+                    </button>
+                    <button class="button-play button-control " id="playButton">
+                    </button>
+                    <button class="skip-next button-skip  button-control" id="nextButton">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="playlist">
+        <div class="container">
+            <h3 class="title">
+                Playlist
+            </h3>
+
+
+            <ul class="list-play" id="playlist">
+            </ul>
+        </div>
+    </section>
+
+
+
+    <script defer src="index.js"></script>
+
+</body>
+
+</html>
